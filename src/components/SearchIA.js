@@ -25,9 +25,8 @@ const SearchIA = () => {
   };
 
   const handleDrop = (e) => {
-    e.preventDefault();
+    e.preventPreventDefault();
     setIsDragging(false);
-    // Aquí puedes manejar el archivo soltado
     console.log('Archivo soltado:', e.dataTransfer.files[0]);
   };
 
@@ -40,25 +39,31 @@ const SearchIA = () => {
 
   return (
     <div className="w-full max-w-2xl mx-auto">
-      <form onSubmit={handleSubmit} className="flex items-center bg-white rounded-[14px] shadow-md h-[40px]">
-        <div className="flex-grow flex items-center pl-4">
-          <Search size={20} className="text-gray-400 mr-2" />
+      <form
+        onSubmit={handleSubmit}
+        className="flex items-center h-[68px] rounded-[14px] shadow-md border-2 border-transparent bg-transparent"
+        style={{
+          borderImage: 'linear-gradient(to right, #ec4899, #8b5cf6) 1',
+        }}
+      >
+        <div className="flex items-center w-full pl-4 relative">
+          <Search size={24} className="absolute left-4 text-gray-400" />
           <input
             type="text"
             placeholder="Buscar marca..."
             value={inputValue}
             onChange={handleInputChange}
-            className="w-full h-full py-2 px-2 outline-none text-gray-700 focus:ring-2 focus:ring-blue-300 rounded-[14px]"
+            className="w-full h-full py-4 pl-12 pr-4 outline-none text-white-700 bg-transparent rounded-[14px]"  // Aplicamos el border-radius aquí también
           />
         </div>
         <div
-          className="p-2 text-gray-400 hover:text-gray-600 cursor-pointer"
+          className="p-2 ml-4 text-gray-400 hover:text-black-600 cursor-pointer"
           onClick={() => fileInputRef.current.click()}
           onDragOver={handleDragOver}
           onDragLeave={handleDragLeave}
           onDrop={handleDrop}
         >
-          <Upload size={20} className={isDragging ? 'text-blue-500' : ''} />
+          <Upload size={24} className={isDragging ? 'text-blue-500' : ''} />
           <input
             type="file"
             ref={fileInputRef}
@@ -69,7 +74,7 @@ const SearchIA = () => {
         </div>
         <button
           type="submit"
-          className="bg-orange-500 text-white rounded-[12px] px-4 h-[30px] mx-1 hover:bg-orange-600 transition-colors"
+          className="bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-[14px] px-4 h-[50px] mx-2 hover:from-pink-600 hover:to-purple-700 transition-colors"
         >
           Buscar
         </button>
