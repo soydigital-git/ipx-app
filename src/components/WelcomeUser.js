@@ -4,13 +4,13 @@ const WelcomeUser = () => {
       <h1 className="text-xl sm:text-2xl md:text-3xl font-bold mb-4 text-center">
         <span className="text-white">👋 Hola, </span>
         <span className="bg-gradient-to-r from-[#04D99D] to-[#04B583] text-transparent bg-clip-text">
-          Registra tu creatividad
+          Registra marca
         </span>
       </h1>
       <h2 className="text-lg sm:text-xl md:text-2xl mb-4 text-center">
-        y protege legalmente tu marca con nuestro{' '}
+        y protege legalmente{' '}
         <span className="font-bold bg-gradient-to-r from-[#04D99D] to-[#04B583] text-transparent bg-clip-text">
-          buscador inteligente.
+          tu idea.
         </span>
       </h2>
     </div>
