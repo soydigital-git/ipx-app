@@ -36,3 +36,20 @@
     transform: rotate(360deg);
   }
 }
+
+/* Ajustes del tamaño de fuente y peso de fuente */
+.text-lg {
+  font-size: 1rem; /* Ajuste del tamaño de fuente */
+}
+
+.font-normal {
+  font-weight: 400; /* Peso de fuente normal */
+}
+
+.font-bold {
+  font-weight: 700; /* Negrita */
+}
+
+.text-[#04D99D] {
+  color: #04D99D;
+}

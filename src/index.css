@@ -7,3 +7,15 @@
 body {
   font-family: 'Roboto', sans-serif;
 }
+
+h2.text-xl {
+  font-size: 1.25rem; /* Ajusta este valor si deseas un tamaño más pequeño */
+}
+
+.text-[#04D99D] {
+  color: #04D99D;
+}
+
+button.underline {
+  font-size: 1rem; /* Ajusta el tamaño del enlace */
+}
